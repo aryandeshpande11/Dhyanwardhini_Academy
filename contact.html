@@ -1,0 +1,108 @@
+<!-- File: try_index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+   <!-- Linked Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Linked CSS -->
+    <link rel="stylesheet" href="style/style1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<!-- End of Head -->
+ <!-- Start of Body -->
+<body>
+            <main>
+         <section>
+            <p> 
+<!-- Navigation Section -->
+              <div class="nav1">
+              <a href="try_index.html">Home</a>
+                     <a href="#" target="_blank">Courses </a>
+                     <a href="payment_form.html" target="_blank">Payment</a>
+                     <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button> 
+                     <a href="contact.html" target="_blank">Contact</a>
+                     
+                     <a href="#" target="_blank"  class="cta-button"3>About US</a>
+                     
+                </p>
+              </div>
+<!-- End of Navigation Section -->
+<!----------------------------------------------------------------------------------------------------------------------------->
+                  <!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Login Modal -->
+ <!------------------------------------------------------------------------------------------------------------------------------------------->
+                <div class="container">
+                    <h1 class="cta-button">Contact Us</h1>
+                    <p class="text-center">We would love to hear from you! Please fill out the form below to get in touch.</p>
+                
+                    <form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Email address</label>
+    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Select your Query</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Select your Type</label>
+    <select multiple class="form-control" id="exampleFormControlSelect2">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Elaborate Your concern</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+</form>
+    <button class="btn btn-primary mt-3">Submit</button>
+</div>
+           
+   
+</body>
+</html>
