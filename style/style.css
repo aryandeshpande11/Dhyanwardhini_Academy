@@ -26,6 +26,7 @@ body {
     background-color: #2476e0;
     padding: 10px;
     border-bottom: 2px solid #000000;
+    background-attachment: fixed;
 }
 .part1 p{
     text-align: right;
@@ -44,7 +45,7 @@ body {
    height: 450px;
    width: 500px;
    float: right;
-    transform: translateY(-115px);
+    transform: translateY(-100px);
   margin-right: -10px;
 }
 
@@ -181,4 +182,23 @@ footer a:hover{
   .enroll-button {
     margin: 0 auto;
   }
+}
+.navbar {
+
+background-color: #112152;
+  padding: 10px;
+  border-bottom: 2px solid #060f55;
+  background-attachment: fixed;
+  text-align: right;
+}
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 20px;
+
+}
+.navbar a:hover {
+  color: #ca5d23;
+  text-decoration: wavy;
+  transition: 0.5s ease;
 }
