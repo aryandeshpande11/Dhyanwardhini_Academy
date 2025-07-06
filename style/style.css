@@ -25,11 +25,12 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0)}
 .part1 {
     padding: 20px;
-    height: 500px; 
+    display:ruby-text-container;
     background-color: #2476e0;
     padding: 10px;
     border-bottom: 2px solid #000000;
     background-attachment: fixed;
+    /*background-image: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');*/
 }
 .part1 p{
     text-align: right;
@@ -43,13 +44,6 @@ body {
    color: #ca5d23;
     text-decoration:wavy;
     transition: 0.5s ease;
-}
-.part1 img{
-   height: 450px;
-   width: 500px;
-   float: right;
-    transform: translateY(-100px);
-  margin-right: -10px;
 }
 
 .cta-button {
@@ -170,21 +164,61 @@ footer a:hover{
 }
 /* Responsive for phones */
 @media (max-width: 768px) {
-  .part1 {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .left-text h1 {
-    font-size: 32px;
-  }
-
   .nav1 {
-    text-align: right;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
 
-  .enroll-button {
-    margin: 0 auto;
+  .nav-left, .nav-right {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-right a, .nav-right button {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .part3 img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .carousel-caption h5,
+  .carousel-caption p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .class-schedule table, 
+  .class-schedule thead,
+  .class-schedule tbody,
+  .class-schedule th, 
+  .class-schedule td, 
+  .class-schedule tr {
+    display: block;
+    width: 100%;
+  }
+
+  .class-schedule tr {
+    margin-bottom: 15px;
+  }
+
+  .class-schedule td, .class-schedule th {
+    text-align: left;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  footer {
+    font-size: 14px;
+    height: auto;
   }
 }
 .nav1{
@@ -192,9 +226,10 @@ footer a:hover{
 background-color: #112152;
   padding: 10px;
   border-bottom: 2px solid #060f55;
-  background-attachment: fixed;
+ justify-content: space-between;
   text-align: right;
   height : 60px;;
+  display: flex;
 }
 .nav1 a {
   color: #ffffff;
@@ -206,4 +241,57 @@ background-color: #112152;
   color: #ca5d23;
   text-decoration: wavy;
   transition: 0.5s ease;
+}
+
+div.container {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-image: url();
+}
+div.container h1 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 20px 0;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #e0a800;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+.carousel-item {
+  height: 400px;
+  background-color: #000;
+  padding: 0px;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-caption h5{ 
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+
+}
+.nav-left .brand-name {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  text-transform: uppercase;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  height: relative;
+
 }
