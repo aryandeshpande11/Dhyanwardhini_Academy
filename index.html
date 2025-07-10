@@ -7,7 +7,7 @@
     <!-- Linked Bootstrap--> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Linked CSS -->
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -37,37 +37,88 @@
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
+
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">LOGIN</h5>
+        <h5 class="modal-title" id="loginModalLabel">LOGIN</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <form action="connect.php" method="post">
+          <!-- Hidden field to tell connect.php this is a login -->
+          <input type="hidden" name="action" value="login">
+
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="loginEmail" name="email" required>
+            <div class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" name="password" required>
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="loginCheck">
+            <label class="form-check-label" for="loginCheck">Remember me</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+
+        <!-- Link to open Signup Modal -->
+        <div class="text-center mt-3">
+          <p>Don't have an account?
+            <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Register</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <!-- This button is optional; you can remove it if it doesn't do anything -->
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- End of Login Modal -->
+ <!------------------------------------------------------------------------------------------------------------------------------>
+ <!-- Signup Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Register</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
-  </div>
-  <div class="mb-3 form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <form action="connect.php" method="post">
+          <input type="hidden" name="action" value="register">
+          
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="signupEmail" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signupPassword" name="password" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+            <input type="password" class="form-control" id="signupConfirmPassword" name="confirm_password" required>
+          </div>
+          <button type="submit" class="btn btn-success">Register</button>
+        </form>
       </div>
     </div>
   </div>
 </div>
-          </section> 
- <!------------------------------------------------------------------------------------------------------------------------------>                   
+ 
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------->         
       <!--First Section-->
            
       
@@ -82,21 +133,21 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/diego-marin-3tw1bfF4Fho-unsplash.jpg" class="d-block w-100" alt="image1">
+      <img src="/img/diego-marin-3tw1bfF4Fho-unsplash.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>REACH NEW HEIGHTS IN LEARNING</h5>
         <p>Guiding Students to the Peak of Academic Success</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/pramod-tiwari-NcYsaW5pV00-unsplash.jpg" class="d-block w-100" alt="image2">
+      <img src="/img/pramod-tiwari-NcYsaW5pV00-unsplash.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>YOUR MIND IS THE SPACESHIP</h5>
         <p>Launch into Learning with Dhyanawardhini Academy</p>
       </div>
     </div>
     <div class="carousel-item">
-      <img src="img/img6.jpg" class="d-block w-100" alt="image3">
+      <img src="/img/img6.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>CLIMB YOUR WAY TO TOP GRADES</h5>
         <p>Step-by-Step Coaching for Long-Term Success</p>
